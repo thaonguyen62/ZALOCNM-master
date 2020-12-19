@@ -1,0 +1,40 @@
+<form [formGroup]="form">
+  <table>
+    <tr>
+      <td><label>Mật khẩu cũ</label></td>
+      <td> <input
+        formControlName="oldPassword"
+        [(ngModel)]="fake.old"
+        name="oldpwd" id="oldpwd"
+        type="password"
+      /></td>
+    </tr>
+    <tr>
+      <td><label>Mật khẩu mới:</label></td>
+      <td> <input type="password" id="password" name="password" formControlName="newPassword" /></td>
+    </tr>
+    <tr>
+      <td> <label>Xác nhận mật khẩu:</label></td>
+      <td><input
+        [(ngModel)]="fake.confirmp"
+        type="password"
+        id="conp"
+        name="password"
+        formControlName="reNewPassword"
+      /></td>
+    </tr>
+  </table>
+  
+  
+
+  <div class="form-group">
+
+    <div class=" col-xs-3">
+      <!-- <button type="button" class="btn btn-danger"  >Hủy<i class="fa "></i></button> -->
+      <button type="submit" (click)="editPhone()" class="btn btn-success"  >Cập nhật<i class="fa"></i></button>
+    </div>
+
+  </div>
+
+</form>
+
